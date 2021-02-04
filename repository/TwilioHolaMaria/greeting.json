@@ -1,0 +1,11 @@
+{
+	"actions": [
+		{
+			"say": "Hello, I am Maria, an assistant that helps you with doubts related with your school, tell me, what is your educational stage, remember that I only can help you with questions from junior high school to high school"
+		},
+		{
+			"listen": true
+		}
+	]
+}
+

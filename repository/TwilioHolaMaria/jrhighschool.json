@@ -1,0 +1,50 @@
+{
+	"actions": [
+		{
+			"say": "Great, you are a junior, I know topics like Biology, History, Spanish and Science"
+        },
+        {
+            "say": "First at all let me aske you something"
+        },
+        {
+          "collect": {
+            "name": "new_student",
+            "questions": [
+              {
+                "question": "What's your first name?",
+                "name": "first_name",
+                "type": "Twilio.FIRST_NAME"
+              },
+              {
+                "question": "Which topic is your question about?",
+                "name": "topic_question",
+                "type": "topicquestion"
+              },
+              {
+                "question": "How old are your?",
+                "name": "age",
+                "type": "Twilio.NUMBER"
+              }
+            ],
+            "on_complete": {
+              "redirect": {
+                "method": "POST",
+                "uri": "https://corey.ngrok.io/api/students"
+              }
+            }
+          }
+        },
+        {
+            "say": "Ok, let us start with your doubts, what is your question?"
+        },
+		{
+			"listen": true
+		},
+		{
+			"redirect": {
+				"method": "GET",
+				"uri": "https://es.wikipedia.org/w/api.php"
+			}
+		}
+	]
+}
